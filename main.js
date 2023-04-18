@@ -1,6 +1,6 @@
 import Game from "./assets/scenes/Game.js";
 import GameOver from "./assets/scenes/GameOver.js";
-import HelloWorldScene from "./assets/scenes/HelloWorldScene.js";
+
 // Create a new Phaser config object
 const config = {
   type: Phaser.AUTO,
