@@ -46,10 +46,20 @@ export default class Game extends Phaser.Scene {
     // colicion entre suelo y formas
     this.physics.add.collider(this.ShapeGroup, this.plataformasPropias);
     // overlap entre formas y Pj
-    this.physics.add.overlap(this.Player, this.ShapeGroup);
+    this.physics.add.overlap(
+      this.Player,
+      this.ShapeGroup,
+      this.collectShape,
+      null
+    );
   }
 
   update() {
     // update game objects
+  }
+
+  collectShape(Jugador, figuraChocada) {
+    console.log("figura recolectada");
+    figuraChocada.disableBody(true, true);
   }
 }
